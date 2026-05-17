@@ -1,12 +1,15 @@
 ## Simple Calculator 🧮
 
-A modern, elegant calculator built with HTML, CSS, and JavaScript featuring a frosted glass effect design with cyan accent colors and fully customizable CSS variables.
+A fun and playful calculator built with HTML, CSS, and JavaScript featuring a vibrant cartoon aesthetic with bouncy animations, colorful gradients, and fully customizable CSS variables.
 
 ### ✨ Features
 
-- **Modern Glassmorphism Design** - Frosted glass effect with backdrop blur
-- **Dark Theme with Transparency** - Sophisticated black color scheme with varying opacity levels
-- **Cyan Accent Operators** - Vibrant cyan operator buttons for visual distinction
+- **Cartoon Aesthetic Design** - Vibrant, playful, and fun visual style
+- **Vibrant Gradient Background** - Pink, orange, and yellow sunset gradient
+- **3D Beveled Effects** - Inset shadows creating depth and dimension
+- **Bouncy Animations** - Interactive button press effects with bounce animations
+- **Warm Color Palette** - Peach calculator body with friendly colors
+- **Cyan & Lime Accents** - Bold operator and equals buttons with gradients
 - **Full Arithmetic Operations** - Addition, subtraction, multiplication, and division
 - **Decimal Support** - Handle floating-point numbers
 - **Keyboard Support** - Use your keyboard for faster calculations
@@ -18,12 +21,17 @@ A modern, elegant calculator built with HTML, CSS, and JavaScript featuring a fr
 - **Responsive Design** - Works perfectly on desktop and mobile devices
 - **CSS Variables** - Easily customizable theme with reusable variables
 - **Error Handling** - Graceful handling of invalid operations
+- **Comic Sans Font** - Authentic cartoon typography
 
 ### 🎨 Design Highlights
 
-- **Frosted Glass Effect**: Semi-transparent elements with blur for a premium look
-- **Smooth Animations**: Hover and active states with elegant transitions
-- **Accessibility**: High contrast text for readability
+- **Playful Color Scheme**: Warm peach, vibrant pink, lime green, and orange
+- **3D Button Effects**: Beveled buttons with inset shadows for tactile feel
+- **Smooth Animations**: Buttons bounce and lift on hover/click with cubic-bezier easing
+- **Decorative Elements**: Soft background circles with radial gradients
+- **Interactive Feedback**: Visual response to all user interactions
+- **Fun Typography**: Comic Sans font family for playful character
+- **Gradient Buttons**: Colorful gradients on operator and equals buttons
 - **Mobile Optimized**: Touch-friendly button sizes and responsive layout
 
 ### 🚀 Live Demo
@@ -35,10 +43,10 @@ A modern, elegant calculator built with HTML, CSS, and JavaScript featuring a fr
 ### 📸 Preview
 
 #### Desktop View
-![Calculator Desktop Preview](https://via.placeholder.com/400x500/0d0d0d/64c8ff?text=Calculator+Desktop)
+![Calculator Desktop Preview](https://via.placeholder.com/400x500/FF6B9D/2C1507?text=Cartoon+Calculator+Desktop)
 
 #### Mobile View
-![Calculator Mobile Preview](https://via.placeholder.com/300x600/0d0d0d/64c8ff?text=Calculator+Mobile)
+![Calculator Mobile Preview](https://via.placeholder.com/300x600/FF6B9D/2C1507?text=Cartoon+Mobile)
 
 ---
 
@@ -69,7 +77,7 @@ xdg-open index.html
 ```
 calculator/
 ├── index.html      # Main HTML structure
-├── styles.css      # Styling with CSS variables
+├── styles.css      # Styling with CSS variables (cartoon theme)
 ├── script.js       # Calculator logic and functionality
 └── README.md       # This file
 ```
@@ -80,25 +88,25 @@ All colors, spacing, and effects are defined as CSS variables for easy customiza
 
 ```css
 :root {
-    /* Color Palette */
-    --color-background: rgba(0, 0, 0, 0.95);
-    --color-calculator-bg: rgba(255, 255, 255, 0.1);
+    /* Cartoon Color Palette */
+    --color-background: linear-gradient(135deg, #FF6B9D 0%, #FFA502 50%, #FFD93D 100%);
+    --color-calculator-bg: rgba(255, 240, 220, 0.95);
+    --color-display-bg: rgba(255, 255, 240, 0.9);
     
-    /* Accent Colors */
-    --color-operator: rgba(100, 200, 255, 1);
+    /* Cartoon Accent Colors */
+    --color-operator: #FF1493;
+    --color-operator-bg: rgba(255, 20, 147, 0.15);
     
     /* Text Colors */
-    --color-text: rgba(255, 255, 255, 0.8);
+    --color-text: #5C3317;
+    --color-text-display: #2C1507;
     
     /* Effects */
-    --blur-calculator: 10px;
-    --blur-button: 8px;
-    
-    /* Spacing */
-    --spacing-base: 20px;
+    --radius-large: 40px;
+    --radius-medium: 30px;
     
     /* Transitions */
-    --transition-default: all 0.2s ease;
+    --transition-default: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 ```
 
@@ -108,9 +116,27 @@ Edit the CSS variables in `styles.css` to match your desired color scheme:
 
 ```css
 :root {
-    --color-operator: rgba(255, 100, 150, 1);  /* Change to pink */
-    --color-background: rgba(20, 20, 40, 0.95);  /* Change background */
+    /* Create a cool/blue theme */
+    --color-background: linear-gradient(135deg, #4A90E2 0%, #357ABD 50%, #1E5AA8 100%);
+    --color-calculator-bg: rgba(230, 240, 255, 0.95);
+    --color-operator: #1E90FF;
+    --color-text: #1a3a5c;
 }
+```
+
+#### Cartoon Theme Elements
+
+```css
+/* Change button border radius for less/more rounded */
+--radius-large: 40px;      /* More = rounder */
+--radius-medium: 30px;
+
+/* Adjust animation speed */
+--transition-default: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+/* Modify button gradient colors */
+--color-operator: #FF1493;  /* Deep pink */
+--color-button-bg: rgba(255, 200, 100, 0.7);  /* Warm orange */
 ```
 
 ### 🔧 How to Use
@@ -132,6 +158,18 @@ Edit the CSS variables in `styles.css` to match your desired color scheme:
 | `Backspace` | Delete last digit |
 | `Escape` | Clear all |
 
+### 🎨 Color Palette
+
+| Element | Color | RGB |
+|---------|-------|-----|
+| Background | Gradient Pink-Orange-Yellow | #FF6B9D → #FFA502 → #FFD93D |
+| Calculator Body | Warm Peach | rgba(255, 240, 220, 0.95) |
+| Operator Buttons | Deep Pink | #FF1493 |
+| Equals Button | Lime Green | #32CD32 → #00FF00 |
+| Clear Button | Orange | #FFB347 → #FFA500 |
+| Display | Light Cream | rgba(255, 255, 240, 0.9) |
+| Text | Brown | #5C3317 |
+
 ### 💻 Browser Support
 
 - ✅ Chrome (recommended)
@@ -143,9 +181,10 @@ Edit the CSS variables in `styles.css` to match your desired color scheme:
 ### 🎨 Technologies Used
 
 - **HTML5** - Semantic markup
-- **CSS3** - Glassmorphism, backdrop-filter, CSS variables
+- **CSS3** - Cartoon design, gradients, 3D effects, animations, CSS variables
 - **JavaScript (ES6)** - Modern calculator logic with event handling
 - **CSS Grid** - Responsive button layout
+- **CSS Animations** - Bounce and wiggle effects
 
 ### 📝 License
 
@@ -153,7 +192,12 @@ This project is open source and available under the MIT License.
 
 ### 🤝 Contributing
 
-Feel free to fork this project and submit pull requests with improvements!
+Feel free to fork this project and submit pull requests with improvements! Some ideas:
+- Additional themes (dark mode, neon, retro)
+- Scientific calculator features
+- History of calculations
+- Sound effects and haptic feedback
+- Themes switcher UI
 
 ### 👨‍💻 Author
 
@@ -161,8 +205,21 @@ Created by [@andx6](https://github.com/andx6)
 
 ---
 
+### 🎮 Fun Features to Try
+
+- Click rapidly on the buttons to see the bounce animations
+- Hover over buttons to see them lift and scale
+- Press keys on your keyboard to calculate faster
+- Try different color combinations by modifying CSS variables
+
 ### 📞 Support
 
 If you encounter any issues or have suggestions, please open an issue on [GitHub Issues](https://github.com/andx6/calculator/issues).
 
-**Enjoy calculating!** ✨
+### 🌟 Version History
+
+- **v2.0** - Cartoon aesthetic redesign with vibrant colors and bouncy animations
+- **v1.1** - Added CSS variables and frosted glass effect
+- **v1.0** - Initial calculator release
+
+**Have fun calculating with cartoon style!** 🎪✨🧮
